@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+	<bean name="customerRepository"
+		class="com.insure.repository.OracleRepository">
+	</bean>
+
+	<!-- Setter Injection -->
+	<!-- <bean name="customerService"
+		class="com.insure.service.CustomerServiceImpl">
+		<property name="customerRepository" ref="customerRepository"></property>
+	</bean> -->
+	
+	<!-- Constructor Injection -->
+	<!-- <bean name="customerService"
+		class="com.insure.service.CustomerServiceImpl">
+	<constructor-arg index="0" ref="customerRepository"></constructor-arg>
+	</bean> -->
+
+	<bean name="insuranceRepository"
+		class="com.insure.repository.MySQLRepository">
+	</bean>
+	
+	<!-- Setter Injection -->
+	<!-- <bean name="insuranceService"
+		class="com.insure.service.InsuranceServiceImpl">
+		<property name="insuranceRepository" ref="insuranceRepository"></property>
+	</bean> -->
+	
+	<!-- Constructor Injection -->
+	<bean name="insuranceService"
+		class="com.insure.service.InsuranceServiceImpl">
+	<constructor-arg index="0" ref="insuranceRepository"></constructor-arg>
+	</bean>
+	
+	
+</beans>

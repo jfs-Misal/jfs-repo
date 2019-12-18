@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import com.insure.model.Insurance;
-import com.insure.repository.CustomerRepository;
-import com.insure.repository.InsuranceRepository;
+
 import com.insure.repository.MySQLRepository;
 import com.insure.repository.OracleRepository;
 import com.insure.service.CustomerService;

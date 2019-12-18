@@ -1,31 +1,27 @@
 package com.insure.repository;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.insure.model.Customer;
 import com.insure.model.Insurance;
 
-@Repository("insuranceRepository")
-public class MySQLRepository implements InsuranceRepository{
+//@Repository("insuranceRepository")
+public class MySQLRepository implements InsureRepository{
 
 	@Override
 	public List<Insurance> getInsurances() {
 
-		List<Insurance> insurances = new ArrayList<>();
-		Insurance insurance=new Insurance();
-		insurance.setInsuranceId("I01");
-		insurance.setInsuranceName("LI");
-		insurance.setInsuranceAmount(1000000);
-		insurances.add(insurance);
-		insurance=new Insurance();
-		insurance.setInsuranceId("I02");
-		insurance.setInsuranceName("VI");
-		insurance.setInsuranceAmount(2000000);
-		insurances.add(insurance);
-		
-		return insurances;
+		return null;
+	}
+
+	@Override
+	public List<Customer> getCustomers() throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
